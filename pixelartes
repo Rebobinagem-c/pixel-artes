@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXEL ARTES COMUNICA~´AO VISUAL - Serviços</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFD700, #001F3F);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        .header {
+            background: linear-gradient(to right, #FFA500, #FF4500);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(to right, #FFD700, #DA70D6);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .upload-area {
+            border: 3px dashed #DA70D6;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #f9f0ff;
+            color: #6a3093;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .services-section select {
+            height: auto;
+            background-color: #f9f9f9;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #1E90FF;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid #87CEEB;
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 12px 20px;
+            background: linear-gradient(to right, #1E90FF, #4169E1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background: linear-gradient(to right, #25D366, #128C7E);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(to right, #FF4500, #FF8C00);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PIXEL ARTES COMUNICAÇÃO VISUAL</h1>
+            <p class="subtitle">SOLUÇÕES PROFISSIONAIS EM ARTES GRÁFICA DESDE 2015</p>
+        </div>
+
+        <form id="formServico">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required />
+            </div>
+            <div class="form-group">
+                <label for="data">Data do serviço:</label>
+                <input type="date" id="data" required />
+            </div>
+            <div class="form-group">
+                <label for="contato">Contato (WhatsApp):</label>
+                <input type="tel" id="contato" required />
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" value="AVENIDA FELIPE DE PAULA Nº 615 - VILA DE AMERICANO-PÁ" required />
+                <a href="https://maps.app.goo.gl/y1HqNvpgMT4LGox1A" class="map-link" target="_blank">VER NO MAPA</a>
+            </div>
+            <div class="form-group">
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" rows="4"></textarea>
+            </div>
+            <div class="form-group services-section">
+                <label for="servicos">Serviços desejados:</label>
+                <select id="servicos" multiple size="6" required>
+                    <option value="LONAS PARA FACHADAS">LONAS PARA FACHADAS</option>
+                    <option value="PANFLETOS">PANFLETOS</option>
+                    <option value="CHAMADAS PARA EVENTOS E PROPAGANDA">CHAMADAS PARA EVENTOS E PROPAGANDA</option>
+                    <option value="ADESIVOS">ADESIVOS</option>
+                    <option value="BLOCOS">BLOCOS</option>
+                    <option value="BANNER DE FOTO">BANNER DE FOTO</option>
+                    <option value="CONVITE ANIMADO">CONVITE ANIMADO</option>
+                    <option value="EDIÇÃO BASICO DE VIDEOS">EDIÇÃO BASICO DE VIDEOS</option>
+                    <option value="LEMBRANCINHA">LEMBRANCINHA</option>
+                    <option value="OUTROS">OUTROS</option>
+                </select>
+                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">(Segure CTRL para selecionar múltiplos serviços)</p>
+            </div>
+            <button type="submit" class="submit-btn">ENVIAR PARA WHATSAPP</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>CONTATO RÁPIDO</h3>
+            <a href="https://wa.me/5591981922189" class="contact-link whatsapp" target="_blank">WhatsApp: (91) 98192-2189</a>
+            <a href="mailto:franciscodaschagasdosssilva@gmail.com" class="contact-link">franciscodaschagasdosssilva@gmail.com</a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('formServico').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const data = document.getElementById('data').value;
+            const contato = document.getElementById('contato').value;
+            const endereco = document.getElementById('endereco').value;
+            const observacoes = document.getElementById('observacoes').value;
+            const servicosSelecionados = Array.from(document.getElementById('servicos').selectedOptions)
+                .map(option => `- ${option.value}`)
+                .join('%0A');
+
+            const mensagem = `*NOVO AGENDAMENTO PELO SITE*%0A%0A` +
+                `*Nome:* ${nome}%0A` +
+                `*Data:* ${data}%0A` +
+                `*Contato:* ${contato}%0A` +
+                `*Endereço:* ${endereco}%0A` +
+                `*Observações:* ${observacoes}%0A%0A` +
+                `*Serviços Solicitados:*%0A${servicosSelecionados}`;
+
+            const numeroWhatsApp = '5591981922189';
+            const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
