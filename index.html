@@ -3,223 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIXEL ARTES COMUNICAÇÃO VISUAL - Serviços</title>
+    <title>Pixel Artes - Cadastro de Eletrodomésticos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
-
         body {
-            background: linear-gradient(135deg, #FFD700, #001F3F);
-            color: #333;
-            line-height: 1.6;
+            background: #f9f4ff;
+            color: #4a2c82;
             padding: 20px;
-            min-height: 100vh;
         }
-
         .container {
-            width: 100%;
             max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            overflow: hidden;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(74, 44, 130, 0.2);
             padding: 30px;
+            border-top: 5px solid #8e44ad;
         }
-
-        .header {
-            background: linear-gradient(to right, #FFA500, #FF4500);
-            color: white;
-            padding: 25px;
+        h1, h2 {
             text-align: center;
-            position: relative;
+            margin-bottom: 20px;
+            color: #8e44ad;
         }
-
-        .header::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 10px;
-            background: linear-gradient(to right, #FFD700, #DA70D6);
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #8e44ad;
         }
-
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
+        .form-group { margin-bottom: 15px; }
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-weight: bold;
-            color: #2c3e50;
         }
-
-        input, textarea, select {
+        input, select, textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fafafa;
         }
-
-        .upload-area {
-            border: 3px dashed #DA70D6;
-            padding: 40px;
-            text-align: center;
-            border-radius: 10px;
-            background-color: #f9f0ff;
-            color: #6a3093;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-
-        .services-section select {
-            height: auto;
-            background-color: #f9f9f9;
-        }
-
-        .map-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: #1E90FF;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .contact-info {
-            background-color: #f0f8ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px 0;
-            text-align: center;
-            border: 2px solid #87CEEB;
-        }
-
-        .contact-link {
-            display: inline-block;
-            margin: 10px 5px;
-            padding: 12px 20px;
-            background: linear-gradient(to right, #1E90FF, #4169E1);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .whatsapp {
-            background: linear-gradient(to right, #25D366, #128C7E);
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(to right, #FF4500, #FF8C00);
+        button {
+            background: #8e44ad;
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            text-transform: uppercase;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 5px;
+        }
+        button:hover { background: #732d91; }
+        .servico-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .servico-icon {
+            text-align: center;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            width: 90px;
+        }
+        .servico-icon:hover {
+            background: #f0e5ff;
+            transform: scale(1.05);
+        }
+        .servico-icon i {
+            font-size: 30px;
+            color: #8e44ad;
+        }
+        .servico-icon span {
+            font-size: 12px;
+            display: block;
+            margin-top: 5px;
+        }
+        #preview {
+            margin-top: 10px;
+            max-width: 100%;
+            max-height: 200px;
+            display: none;
+        }
+        #foto {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>PIXEL ARTES COMUNICAÇÃO VISUAL</h1>
-            <p class="subtitle">SOLUÇÕES PROFISSIONAIS EM ARTES GRÁFICA DESDE 2015</p>
+<div class="container">
+    <div class="logo">PIXEL ARTES</div>
+    <h1><i class="fas fa-tools"></i> Cadastro de Eletrodomésticos</h1>
+
+    <form onsubmit="return false">
+        <div class="form-group">
+            <label for="nome">Nome do Cliente:</label>
+            <input type="text" id="nome" required>
         </div>
 
-        <form id="formServico">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" required />
-            </div>
-            <div class="form-group">
-                <label for="data">Data do serviço:</label>
-                <input type="date" id="data" required />
-            </div>
-            <div class="form-group">
-                <label for="contato">Contato (WhatsApp):</label>
-                <input type="tel" id="contato" required />
-            </div>
-            <div class="form-group">
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" value="AVENIDA FELIPE DE PAULA Nº 615 - VILA DE AMERICANO-PÁ" required />
-                <a href="https://maps.app.goo.gl/y1HqNvpgMT4LGox1A" class="map-link" target="_blank">VER NO MAPA</a>
-            </div>
-            <div class="form-group">
-                <label for="observacoes">Observações:</label>
-                <textarea id="observacoes" rows="4"></textarea>
-            </div>
-            <div class="form-group services-section">
-                <label for="servicos">Serviços desejados:</label>
-                <select id="servicos" multiple size="6" required>
-                    <option value="LONAS PARA FACHADAS">LONAS PARA FACHADAS</option>
-                    <option value="PANFLETOS">PANFLETOS</option>
-                    <option value="CHAMADAS PARA EVENTOS E PROPAGANDA">CHAMADAS PARA EVENTOS E PROPAGANDA</option>
-                    <option value="ADESIVOS">ADESIVOS</option>
-                    <option value="BLOCOS">BLOCOS</option>
-                    <option value="BANNER DE FOTO">BANNER DE FOTO</option>
-                    <option value="CONVITE ANIMADO">CONVITE ANIMADO</option>
-                    <option value="EDIÇÃO BASICO DE VIDEOS">EDIÇÃO BASICO DE VIDEOS</option>
-                    <option value="LEMBRANCINHA">LEMBRANCINHA</option>
-                    <option value="OUTROS">OUTROS</option>
-                </select>
-                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">(Segure CTRL para selecionar múltiplos serviços)</p>
-            </div>
-            <button type="submit" class="submit-btn">ENVIAR PARA WHATSAPP</button>
-        </form>
-
-        <div class="contact-info">
-            <h3>CONTATO RÁPIDO</h3>
-            <a href="https://wa.me/5591981922189" class="contact-link whatsapp" target="_blank">WhatsApp: (91) 98192-2189</a>
-            <a href="mailto:franciscodaschagasdosssilva@gmail.com" class="contact-link">franciscodaschagasdosssilva@gmail.com</a>
+        <div class="form-group">
+            <label for="telefone">Telefone/WhatsApp:</label>
+            <input type="tel" id="telefone" required placeholder="(00) 00000-0000">
         </div>
-    </div>
-    <script>
-        document.getElementById('formServico').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const data = document.getElementById('data').value;
-            const contato = document.getElementById('contato').value;
-            const endereco = document.getElementById('endereco').value;
-            const observacoes = document.getElementById('observacoes').value;
-            const servicosSelecionados = Array.from(document.getElementById('servicos').selectedOptions)
-                .map(option => `- ${option.value}`)
-                .join('%0A');
 
-            const mensagem = `*NOVO AGENDAMENTO PELO SITE*%0A%0A` +
-                `*Nome:* ${nome}%0A` +
-                `*Data:* ${data}%0A` +
-                `*Contato:* ${contato}%0A` +
-                `*Endereço:* ${endereco}%0A` +
-                `*Observações:* ${observacoes}%0A%0A` +
-                `*Serviços Solicitados:*%0A${servicosSelecionados}`;
+        <div class="form-group">
+            <label for="endereco">Endereço Completo:</label>
+            <input type="text" id="endereco" required>
+        </div>
 
-            const numeroWhatsApp = '5591981922189';
-            const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
-            window.open(url, '_blank');
-        });
-    </script>
+        <div class="form-group">
+            <label for="modelo">Modelo do Eletrodoméstico:</label>
+            <input type="text" id="modelo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" required>
+        </div>
+
+        <div class="form-group">
+            <label for="serie">Número de Série:</label>
+            <input type="text" id="serie" required>
+        </div>
+
+        <div class="form-group">
+            <label for="descricao">Descrição do Defeito:</label>
+            <textarea id="descricao" rows="4" placeholder="Descreva o problema ou observações..." required></textarea>
+        </div>
+
+        <div class="form-group" id="foto-group">
+            <label for="foto">Foto do Eletrodoméstico:</label>
+            <label class="servico-icon" for="foto" style="display: inline-block; cursor: pointer;">
+                <i class="fas fa-camera-retro"></i>
+                <span>Selecionar Foto</span>
+            </label>
+            <input type="file" id="foto" accept="image/*" onchange="previewFoto(event)">
+            <img id="preview" alt="Pré-visualização da imagem">
+        </div>
+
+        <div class="servico-icons">
+            <a href="#nome" class="servico-icon"><i class="fas fa-user"></i><span>Cliente</span></a>
+            <a href="#endereco" class="servico-icon"><i class="fas fa-map-marker-alt"></i><span>Endereço</span></a>
+            <a href="#telefone" class="servico-icon"><i class="fas fa-phone-alt"></i><span>Telefone</span></a>
+            <a href="#modelo" class="servico-icon"><i class="fas fa-clipboard-list"></i><span>Modelo</span></a>
+            <a href="#marca" class="servico-icon"><i class="fas fa-tags"></i><span>Marca</span></a>
+            <a href="#serie" class="servico-icon"><i class="fas fa-barcode"></i><span>Série</span></a>
+            <a href="#foto-group" class="servico-icon"><i class="fas fa-camera-retro"></i><span>Foto</span></a>
+        </div>
+
+        <button type="submit"><i class="fas fa-save"></i> Salvar Cadastro</button>
+    </form>
+</div>
+
+<script>
+function previewFoto(event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById('preview');
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+        }
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = '';
+        preview.style.display = 'none';
+    }
+}
+</script>
 </body>
 </html>
